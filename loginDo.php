@@ -17,5 +17,5 @@ if (mysqli_num_rows($result) == 1) {
 	$_SESSION['loggedIn'] = true;
 	$_SESSION['username'] = $username;
 }
-header('/index.php');
+header('Location: /index.php');
 ?>
