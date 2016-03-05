@@ -72,15 +72,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	<div id="body">
 		<p>You will need to log in to view this page!</p>
+		
+		<form action='/application/views/login.php' method=POST>
+			<input type=text name='username' placeholder='Username...'/><br/>
+			Password: <input type=password name='password'/><br/>
+			<input type=submit value='Login'/>
+		</form>
 	</div>
 
 	<p class="footer">Page rendered in <strong>{elapsed_time}</strong> seconds. <?php echo  (ENVIRONMENT === 'development') ?  'CodeIgniter Version <strong>' . CI_VERSION . '</strong>' : '' ?></p>
-	
-	<form action='/application/views/login.php' method=POST>
-	<input type=text name='username' placeholder='Username...'/><br/>
-	Password: <input type=password name='password'/><br/>
-	<input type=submit value='Login'/>
-	</form>
 </div>
 
 </body>
