@@ -6,10 +6,11 @@ $dbuser = "bdb658287f728a";
 $dbpass = "ffc89916";
 $dbname = "planning";
 
-mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
+$connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
 	//User is already logged in.
+	echo "Welcome!";
 } else {
 	?>
 You need to log in to view this page:
@@ -17,7 +18,7 @@ You need to log in to view this page:
 <form action='loginDo.php' method=POST>
 <input type=text name='username' placeholder='Username...'/><br/>
 Password: <input type=password name='password'/><br/>
-<input type=submit value='submit'/>
+<input type=submit value='Login'/>
 </form>
 	<?php
 }
