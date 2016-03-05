@@ -10,7 +10,7 @@ $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
 	//User is already logged in.
-	echo "Welcome!";
+	echo "Welcome! <a href='logout.php'>Logout</a>";
 } else {
 	?>
 You need to log in to view this page:
