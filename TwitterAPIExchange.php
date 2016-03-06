@@ -253,6 +253,7 @@ class TwitterAPIExchange
         $getfield = $this->getGetfield();
         $postfields = $this->getPostfields();
         $options = array(
+			CURLOPT_SSL_VERIFYPEER => false,
             CURLOPT_HTTPHEADER => $header,
             CURLOPT_HEADER => false,
             CURLOPT_URL => $this->url,
@@ -271,7 +272,6 @@ class TwitterAPIExchange
             }
         }
         $feed = curl_init();
-		curl_setopt($feed, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt_array($feed, $options);
         $json = curl_exec($feed);
         if (($error = curl_error($feed)) !== '')
