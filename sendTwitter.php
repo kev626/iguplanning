@@ -1,6 +1,8 @@
 <?php
 ini_set('display_errors', '1');
 
+try {
+
 require_once('TwitterAPIExchange.php');
 
 $settings = array(
@@ -23,6 +25,8 @@ $twitter = new TwitterAPIExchange($settings);
 echo $twitter->buildOauth($url, $requestMethod)
     ->setPostfields($postfields)
     ->performRequest();
+
+} catch (Exception $e) {  }
 
 header("Location: /index.php");
 ?>
