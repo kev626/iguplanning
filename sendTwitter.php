@@ -49,5 +49,5 @@ try {
 		);
 	}
 } catch (Exception $e) { echo $e->getMessage(); }
-header("Location: /index.php");
+//header("Location: /index.php");
 ?>
