@@ -10,7 +10,16 @@ $connection = mysqli_connect($dbhost, $dbuser, $dbpass, $dbname);
 
 if (isset($_SESSION['loggedIn']) && $_SESSION['loggedIn'] == true) {
 	//User is already logged in.
-	echo "Welcome! <a href='logout.php'>Logout</a>";
+	echo "Welcome! <a href='logout.php'>Logout</a>
+
+<form action='sendTwitter.php' method=POST>
+Remind the team of an event
+When? <input type=date name='date'/><br/>
+Where? <input type=text name='where'/><br/>
+<input type=submit value='Remind the team!'/>
+</form>
+
+	";
 } else {
 	?>
 You need to log in to view this page:
