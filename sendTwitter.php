@@ -39,7 +39,7 @@ $client = new Services_Twilio($sid, $token);
 $message = $client->account->messages->sendMessage(
   '4847256552', // From a valid Twilio number
   '6103928967', // Text this number
-  "Testing...";
+  "Testing..."
 );
 
 } catch (Exception $e) { echo $e->getMessage(); }
