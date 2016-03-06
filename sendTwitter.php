@@ -33,7 +33,6 @@ try {
 	require('Twilio/Services/Twilio.php');
 
 	$iguNumbers = array(
-		"4847473871",
 		"6103928967"
 	);
 
