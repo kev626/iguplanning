@@ -30,7 +30,7 @@ echo $twitter->buildOauth($url, $requestMethod)
 */
 try {
 
-require('/path/to/twilio-php/Services/Twilio.php');
+require('Twilio/Services/Twilio.php');
 
 $sid = "ACb77abef50ba2a17f25d1fe5fe1e6f0b1";
 $token = "206bc3fe644469058eb780d9c4327a33";
