@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', '1');
-
+/*
 try {
 
 require_once('TwitterAPIExchange.php');
@@ -27,6 +27,21 @@ echo $twitter->buildOauth($url, $requestMethod)
     ->performRequest();
 
 } catch (Exception $e) { echo $e->getMessage(); }
+*/
+try {
 
+require('/path/to/twilio-php/Services/Twilio.php');
+
+$sid = "ACb77abef50ba2a17f25d1fe5fe1e6f0b1";
+$token = "206bc3fe644469058eb780d9c4327a33";
+
+$client = new Services_Twilio($sid, $token);
+$message = $client->account->messages->sendMessage(
+  '4847256552', // From a valid Twilio number
+  '6103928967', // Text this number
+  "Testing...";
+);
+
+} catch (Exception $e) { echo $e->getMessage(); }
 header("Location: /index.php");
 ?>
