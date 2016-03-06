@@ -26,7 +26,7 @@ echo $twitter->buildOauth($url, $requestMethod)
     ->setPostfields($postfields)
     ->performRequest();
 
-} catch (Exception $e) {  }
+} catch (Exception $e) { echo $e->getMessage(); }
 
 //header("Location: /index.php");
 ?>
