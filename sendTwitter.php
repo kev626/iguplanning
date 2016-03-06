@@ -9,7 +9,7 @@ $settings = array(
     'oauth_access_token' => "3939785352-S3DCa1juie2ntdgqIxWaSUeEN8Ro3bZ9m5q8fvL",
     'oauth_access_token_secret' => "O2oEVsU7X79PV1skMiLqgUDEIZHZCuUMXE7mq8qufxdRb",
     'consumer_key' => "YzHwoh9YpnDnOsoB6D9mJsH87",
-    'consumer_secret' => "YzHwoh9YpnDnOsoB6D9mJsH87"
+    'consumer_secret' => "qkTCvlHhY2EyPj5mewAVIJ5qQCfhvYuzHSM4CjteEpKPdBv8JV"
 );
 
 $url = 'https://api.twitter.com/1.1/statuses/update.json';
