@@ -15,7 +15,7 @@ $date = $_POST['date'];
 $location = $_POST['where'];
 
 $postfields = array(
-    'status' => "There will be a meeting on $date at $location! See you there!";
+    'status' => "There will be a meeting on $date at $location! See you there!"
 );
 $twitter = new TwitterAPIExchange($settings);
 echo $twitter->buildOauth($url, $requestMethod)
