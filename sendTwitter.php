@@ -30,18 +30,24 @@ echo $twitter->buildOauth($url, $requestMethod)
 */
 try {
 
-require('Twilio/Services/Twilio.php');
+	require('Twilio/Services/Twilio.php');
 
-$sid = "ACb77abef50ba2a17f25d1fe5fe1e6f0b1";
-$token = "206bc3fe644469058eb780d9c4327a33";
+	$iguNumbers = array(
+		"2345678901",
+		"6103928967"
+	);
 
-$client = new Services_Twilio($sid, $token);
-$message = $client->account->messages->sendMessage(
-  '4847256552', // From a valid Twilio number
-  '6103928967', // Text this number
-  "Testing..."
-);
+	$sid = "ACb77abef50ba2a17f25d1fe5fe1e6f0b1";
+	$token = "206bc3fe644469058eb780d9c4327a33";
 
+	$client = new Services_Twilio($sid, $token);
+	foreach($iguNumbers as $number) {
+		$message = $client->account->messages->sendMessage(
+		  '4847256552', // From a valid Twilio number
+		  $number, // Text this number
+		  "Testing..."
+		);
+	}
 } catch (Exception $e) { echo $e->getMessage(); }
 header("Location: /index.php");
 ?>
