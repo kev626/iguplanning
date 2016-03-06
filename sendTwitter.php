@@ -1,6 +1,6 @@
 <?php
 ini_set('display_errors', '1');
-/*
+
 try {
 
 require_once('TwitterAPIExchange.php');
@@ -27,7 +27,7 @@ echo $twitter->buildOauth($url, $requestMethod)
     ->performRequest();
 
 } catch (Exception $e) { echo $e->getMessage(); }
-*/
+
 try {
 
 	require('Twilio/Services/Twilio.php');
@@ -44,9 +44,9 @@ try {
 		$message = $client->account->messages->sendMessage(
 		  '4847256552', // From a valid Twilio number
 		  $number, // Text this number
-		  "Testing..."
+		  "There will be a meeting on $date at $location! See you there!"
 		);
 	}
 } catch (Exception $e) { echo $e->getMessage(); }
-//header("Location: /index.php");
+header("Location: /index.php");
 ?>
