@@ -61,6 +61,7 @@ class TwitterAPIExchange
      */
     public function __construct(array $settings)
     {
+		
         if (!in_array('curl', get_loaded_extensions())) 
         {
             throw new Exception('You need to install cURL, see: http://curl.haxx.se/docs/install.html');
@@ -270,6 +271,7 @@ class TwitterAPIExchange
             }
         }
         $feed = curl_init();
+		curl_setopt($feed, CURLOPT_SSL_VERIFYPEER, false);
         curl_setopt_array($feed, $options);
         $json = curl_exec($feed);
         if (($error = curl_error($feed)) !== '')
